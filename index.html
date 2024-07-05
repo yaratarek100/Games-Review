@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="loader-box">
+      <div class="loader"></div>
+    </div>
+
+    <header>
+      <img src="img/wraper.png" />
+    </header>
+    <nav class="rounded-4 px-3 py-2">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo-sm.png" />
+          <h1 class="h2">GAME REVIEWS</h1>
+        </a>
+
+        <img src="img/download.svg" class="" />
+
+        <ul class="">
+          <li><a href="#" class="nav-link">MMORPG</a></li>
+          <li><a href="#" class="nav-link">SHOOTER</a></li>
+          <li><a href="#" class="nav-link">SAILING</a></li>
+          <li><a href="#" class="nav-link">PERMADEATH</a></li>
+          <li><a href="#" class="nav-link">SUPERHERO</a></li>
+          <li><a href="#" class="nav-link">PIXEL</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="details-window bg-dark position-absolute top-0 start-0 w-100">
+        <h1 class="">Details Game</h1>
+        <button class="btn-close btn-close-white" id="btnClose"></button>
+        <div class="game-container d-flex">
+          <img src="" />
+          <div class="game-info">
+            <h3 class="h1">Title : <span></span></h3>
+            <p>Category : <span></span></p>
+            <p>Platform : <span></span></p>
+            <p>Status : <span></span></p>
+            <p class="game-description"></p>
+            <a href="#" class="btn btn-outline-warning">Show Game</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
+        <div class="row"></div>
+      </div>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

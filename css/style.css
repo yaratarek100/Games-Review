@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Comfortaa", cursive;
+}
+main {
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  margin: 0%;
+  padding: 0;
+}
+ul li {
+  margin-inline: 2%;
+  padding-block: 0.3rem;
+}
+a {
+  text-decoration: none;
+}
+header img {
+  max-height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* nav bar ------------------- */
+nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  align-items: center;
+  margin: 0;
+  padding: 0%;
+}
+
+nav {
+  padding: 1rem !important;
+  width: 80% !important;
+  margin: auto;
+  background-color: rgb(58, 73, 123) !important;
+  position: sticky !important;
+  top: 0;
+  margin-top: -3%;
+  z-index: 1 !important;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.418);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo ,nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-logo {
+  justify-content: flex-start;
+  gap: 2px;
+ width: 30%;
+}
+nav ul{
+  width: 55%;
+}
+
+.nav-logo .h2 {
+  font-size: 1.3rem !important;
+  margin: 0;
+  white-space: nowrap;
+}
+nav img {
+  width: 5%;
+}
+.nav-logo img {
+  width: 17%;
+}
+
+.game-card *,
+nav *,
+.nav-link {
+  color: white;
+  cursor: pointer;
+}
+
+.active-link {
+  color: rgb(0, 110, 255) !important;
+}
+
+.nav-link:hover {
+  color: rgb(0, 110, 255);
+}
+
+/* ----------------------- */
+html {
+  font-size: 13px;
+}
+.game-card,
+.card-footer {
+  border-color: rgba(0, 0, 0, 0.247) !important;
+  transition: all 0.5s;
+}
+
+.card-description {
+  height: 100px;
+  overflow: hidden;
+}
+.card-description span {
+  top: 10%;
+  right: 1%;
+  font-weight: 800;
+  background-color: rgb(81, 97, 148) !important;
+  border: 0;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+  color: #a7a7a7 !important;
+  padding-top: 0.5rem;
+  font-weight: 500;
+}
+
+.card-body img {
+  filter: grayscale(75%);
+  transition: all 0.6s;
+}
+
+.card-footer span {
+  background-color: rgb(50 49 53);
+  padding-inline: 2% !important;
+  padding: 0;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+.game-card:hover {
+  scale: 1.05;
+}
+.game-card:hover .card-description span {
+  background-color: rgb(0, 110, 255) !important;
+}
+
+.game-card:hover .card-body img {
+  filter: grayscale(0%);
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 85%;
+  }
+}
+
+/* details */
+
+.details-window {
+  z-index: 2;
+  min-height: 100vh;
+  padding-inline: 4rem;
+  padding-top: 2rem;
+  display: none;
+}
+.game-container p{
+  font-size: 1.5rem;
+}
+.details-window button {
+  position: inherit;
+  scale: 2;
+  right: 4rem;
+  top: 4rem;
+}
+
+.game-container {
+  padding-top: inherit;
+  justify-content: space-between;
+  align-items: start;
+}
+.game-container *,
+.details-window h1 {
+  color: white !important;
+  margin-top: 1rem;
+}
+.game-container > div {
+  width: 65%;
+}
+
+.game-container img {
+  width: 30%;
+}
+
+.game-info {
+  margin: 0;
+}
+.game-info a {
+  font-size: 1.5rem;
+}
+.game-info p span {
+  background-color: rgb(72, 197, 255);
+  color: black !important;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding-inline: 1%;
+}
+
+/* menu at small screens */
+@media screen and (max-width: 992px) {
+  nav .container > img {
+    display: block !important;
+  }
+  nav .container > ul {
+    display: none !important;
+  }
+
+  nav .container .small-list {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+  }
+}
+nav .container > img {
+  display: none;
+}
+nav .container > ul {
+  display: flex ;
+  padding-block: 0.3rem;
+}
+
+/* loader */
+/* HTML: */
+.loader-box{
+  position: absolute;
+  top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+  background-color: rgba(0, 0, 0, 0.945);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  color: rgb(58, 73, 123);
+  position: relative;
+  background: radial-gradient(10px,currentColor 94%,#0000);
+  scale: 2;
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(9px at bottom right,#0000 94%,currentColor) top    left,
+    radial-gradient(9px at bottom left ,#0000 94%,currentColor) top    right,
+    radial-gradient(9px at top    right,#0000 94%,currentColor) bottom left,
+    radial-gradient(9px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  animation: l18 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes l18 {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
+}
